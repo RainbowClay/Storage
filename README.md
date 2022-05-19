@@ -1,13 +1,14 @@
 # Fibonacci Heap
 
-## C# implementation of a [fibonacci heap structure](https://en.wikipedia.org/wiki/Fibonacci_heap).
+A [Fibonacci Heap](https://en.wikipedia.org/wiki/Fibonacci_heap) is a data structure modelling a priority queue. The implemenation is generic like System.Collection.Generic types.
 
-This library can be used to create a highly efficent self sorting data structure.
+## Example
 
-| Platform        |                                                                                     Azure Pipelines                                                                                      |
-| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| NetStandard 2.0 | [![Build Status](https://sqeezytech.visualstudio.com/FibonacciHeap/_apis/build/status/FibonacciHeap-CI)](https://sqeezytech.visualstudio.com/FibonacciHeap/_build/latest?definitionId=5) |
+```csharp
+// a heap with objects for data and int as sorting key.
+var heap = new FibonacciHeap<object, int>(0);
 
-## Install via NuGet
+var nodeToInsert = new FibonacciHeapNoe<object, int>(new object(), -42);
 
-    Install-Package FibonacciHeap
+heap.Insert(nodeToInsert);
+```
